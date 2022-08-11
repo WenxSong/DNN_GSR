@@ -1,4 +1,4 @@
-# Data-driven discovery of soil moisture flow governing equation: a sparse regression framework
+# Sparse Regression for Soil Moisture Flow Equation
 
 
 Codes for the paper: 
