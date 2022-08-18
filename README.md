@@ -6,6 +6,6 @@ Song, W., Shi, L., Wang, L., Wang, Y., & Hu, X. (2022). Data-driven discovery of
 
 # Methodology overview
 
-The codes and dataset are preparing,please visit this page several days later, thanks!
+The codes and dataset are preparing, please visit this page several days later, thanks!
 
 # Tips
