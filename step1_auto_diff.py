@@ -171,26 +171,6 @@ class DNN:
         f_star = self.sess.run(self.meta_data_pred, {self.z_pred_tf: X_star[:,0:1], self.t_pred_tf: X_star[:,1:2]})
         return  f_star
     
-def plot_theta(T,X,theta):
-    fig, ax = plt.subplots(1,1,figsize=(8,4))
-    mapped = ax.pcolormesh(T,X,theta,cmap='RdBu_r')
-    
-    ax.xaxis.set_ticks_position('bottom')
-    ax.xaxis.set_major_locator(ticker.MultipleLocator(10))
-    ax.xaxis.set_minor_locator(ticker.MultipleLocator(2))
-    ax.yaxis.set_major_locator(ticker.MultipleLocator(50))
-    ax.yaxis.set_minor_locator(ticker.MultipleLocator(10))
-    ax.tick_params(direction='in',labelsize=12,width=1,which='major')
-    ax.tick_params(direction='in',labelsize=12,width=0.5,which='minor')
-
-    ax.set_ylabel("Depth [cm]",labelpad=10,fontsize=16)
-    ax.set_xlabel("Simulate Days [day]",labelpad=14,fontsize=16)
-    
-    plt.subplots_adjust(wspace=0, hspace=0.4,top=0.95,bottom=0.1)
-    cb = fig.colorbar(mapped,ax=ax,fraction=0.05,aspect=30,pad=0.05)
-    
-    cb.set_label(label = 'Volumetric Water Content ' + r'$ \theta $' + ' [-]', fontsize=16)
-    cb.ax.tick_params(axis='y', direction='in',labelsize=12)
 
 
 if __name__ == "__main__": 

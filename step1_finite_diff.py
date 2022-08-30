@@ -92,24 +92,24 @@ class Finite:
                 
         return theta, candi_lib
     
-    
-data_path = 'data/loam_S1'
+if __name__ == "__main__": 
+    data_path = 'data/loam_S1'
 
-data = pd.read_csv(data_path+'/th.txt',delim_whitespace=True,header=None)
-
-
-measured_data_points = [10,12,14,16,18]
-
-depth = np.array(measured_data_points)*0.01
-time_series = np.array(data.iloc[:,0])
-measured_data_points = [points+1 for points in measured_data_points]
-measured_data = np.array(data.iloc[:,measured_data_points])
+    data = pd.read_csv(data_path+'/th.txt',delim_whitespace=True,header=None)
 
 
+    measured_data_points = [10,12,14,16,18]
 
-diff_er = Finite(measured_data.T,depth,time_series)
+    depth = np.array(measured_data_points)*0.01
+    time_series = np.array(data.iloc[:,0])
+    measured_data_points = [points+1 for points in measured_data_points]
+    measured_data = np.array(data.iloc[:,measured_data_points])
 
-theta, candidates = diff_er.generate_lib()
 
-np.save(data_path+'/collected_theta',theta)
-np.save(data_path+'/candidates',candidates)
+
+    diff_er = Finite(measured_data.T,depth,time_series)
+
+    theta, candidates = diff_er.generate_lib()
+
+    np.save(data_path+'/collected_theta',theta)
+    np.save(data_path+'/candidates',candidates)

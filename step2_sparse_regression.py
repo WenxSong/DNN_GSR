@@ -154,21 +154,6 @@ def TrainSGTRidge(As, bs, num_tols, norm_x, norm_y, lam = 10**-4):
                 
     return X,Tol,Losses
 
-def l0(As,x):
-
-    D,m = x.shape
-    n,_ = As[0].shape
-    k = np.count_nonzero(x)/m
-    
-    return k
-
-def ld(As,bs,x):
-
-    D,m = x.shape
-    n,_ = As[0].shape
-    rss = np.sum([np.linalg.norm(bs[j] - As[j].dot(x[:,j].reshape(D,1)))**2 for j in range(m)])  
-
-    return rss 
 
 def data_group(x,y,u,win_size = 0.001, min_lim = 200):
 
