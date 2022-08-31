@@ -1,4 +1,4 @@
-# Discovering Soil Moisture Flow Equation from Data via Sparse Regression
+## Discovering Soil Moisture Flow Equation from Data via Sparse Regression
 
 
 Public Datasets and Codes for Data-driven discovery of soil moisture flow governing equation: A sparse regression framework. Water Resources Research, 58, e2022WR031926. https://doi.org/10.1029/2022WR031926
