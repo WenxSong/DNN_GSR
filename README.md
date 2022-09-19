@@ -9,7 +9,7 @@ Public Datasets and Codes for Data-driven discovery of soil moisture flow govern
 - Matplotlib
 - Numpy
 - Pandas
-- Tensorflow 1.14
+- Tensorflow 1.15
 
 
 ## Datasets
